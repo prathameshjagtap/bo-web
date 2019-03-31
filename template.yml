@@ -34,7 +34,7 @@ Resources:
         - LambdaExecutionRole
         - Arn
       Events:
-        GetEvent:
+        GetResource:
           Type: Api
           Properties:
             Path: /{proxy+}
