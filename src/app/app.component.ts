@@ -7,9 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bo-web';
-  model = {
-    left: false,
-    middle: true,
-    right: false
-  };
 }
