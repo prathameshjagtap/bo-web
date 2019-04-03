@@ -1,32 +1,31 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-  <a class="navbar-brand" href="#">Blend Orders</a>
+    <a class="navbar-brand" href="#">Blend Orders</a>
 
-  <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#">Orders <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Analytics</a>
-      </li>
-    </ul>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" [routerLink]="['orders']">Orders <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Analytics</a>
+            </li>
+        </ul>
 
-    <ul class="navbar-nav">
-      <li ngbDropdown class="nav-item">
-        <a ngbDropdownToggle id="dropdown01" href="#" class="nav-link" data-toggle="dropdown" 
-          aria-haspopup="true" aria-expanded="false">Platforms</a>
-        <div ngbDropdownMenu aria-labelledby="dropdown01">
-          <a ngbDropdownItem>Zomato</a>
-          <a ngbDropdownItem>Swiggy</a>
-          <a ngbDropdownItem>Foodpanda</a>
-        </div>
-      </li>
-    </ul>
-    
-    <div class="my-1 my-lg-0">
-      <button class="btn btn-secondary my-2 my-sm-0">
+        <ul class="navbar-nav">
+            <li ngbDropdown class="nav-item">
+                <a ngbDropdownToggle id="dropdown01" href="#" class="nav-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Platforms</a>
+                <div ngbDropdownMenu aria-labelledby="dropdown01">
+                    <a ngbDropdownItem>Zomato</a>
+                    <a ngbDropdownItem>Swiggy</a>
+                    <a ngbDropdownItem>Foodpanda</a>
+                </div>
+            </li>
+        </ul>
+
+        <div class="my-1 my-lg-0">
+            <button class="btn btn-secondary my-2 my-sm-0">
         <fa-icon [icon]="faUserCog" style="color: white"></fa-icon>
       </button>
+        </div>
     </div>
-  </div>
 </nav>

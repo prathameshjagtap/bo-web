@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faUserCog } from '@fortawesome/free-solid-svg-icons';
-
+import{ActivatedRoute,Router,ParamMap} from '@angular/router';
 @Component({
   selector: 'app-home-navbar',
   templateUrl: './home-navbar.component.html',
@@ -9,7 +9,7 @@ import { faUserCog } from '@fortawesome/free-solid-svg-icons';
 export class HomeNavbarComponent implements OnInit {
   faUserCog = faUserCog;
 
-  constructor() { }
+ constructor(public router:Router,private route: ActivatedRoute) { }
 
   ngOnInit() {
   }
