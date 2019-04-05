@@ -1,3 +1,27 @@
-<p>
-  preparing-order works!
-</p>
+<div class="row" *ngFor="let item of pendingOrders">
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div>
+            System:{{item.system}}
+        </div>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12">
+        <div>
+            Bill Amount:{{item.amount}}
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-6 col-xs-12">
+        <div>
+            Payment Status:{{item.paymentStatus}}
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-6 col-xs-12">
+        <div>
+            Customer Name:{{item.customer.name}}
+        </div>
+    </div>
+    <div class="col-md-2 col-sm-6 col-xs-12">
+        <div>
+            Address :{{item.customer.address}}
+        </div>
+    </div>
+</div>

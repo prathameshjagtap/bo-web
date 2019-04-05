@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from "@angular/common/http";
 import { FormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -15,6 +16,8 @@ import { TodaysOrdersComponent } from './todays-orders/todays-orders.component';
 import { PendingOrderComponent } from './pending-order/pending-order.component';
 import { PreparingOrderComponent } from './preparing-order/preparing-order.component';
 import { ReadyToPickOrderComponent } from './ready-to-pick-order/ready-to-pick-order.component';
+import { AnalyticsComponent } from './analytics/analytics.component';
+import {OrderService} from './services/order.service'
 
 @NgModule({
   declarations: [
@@ -24,6 +27,7 @@ import { ReadyToPickOrderComponent } from './ready-to-pick-order/ready-to-pick-o
     LandingPageComponent,
     PageNotFoundComponent,
     TodaysOrdersComponent,
+    AnalyticsComponent,
     PendingOrderComponent,
     PreparingOrderComponent,
     ReadyToPickOrderComponent
@@ -31,11 +35,12 @@ import { ReadyToPickOrderComponent } from './ready-to-pick-order/ready-to-pick-o
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     FormsModule,
     NgbModule,
     FontAwesomeModule
   ],
-  providers: [],
+  providers: [OrderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
